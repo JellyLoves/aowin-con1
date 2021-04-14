@@ -1,0 +1,19 @@
+server:
+  port: 9200
+  servlet:
+    context-path: /user
+  
+spring:
+  application:
+    name: user-web
+    
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8100/eureka/
+      
+feign:
+  hystrix:
+    enabled: true
